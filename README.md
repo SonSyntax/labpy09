@@ -1,5 +1,6 @@
 # labpy09
 
+![baru3](https://github.com/user-attachments/assets/e30d09a8-c619-4645-818c-d0cc3eb509e0)
 
 
 ## __init__.py
