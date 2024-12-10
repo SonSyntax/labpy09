@@ -77,6 +77,16 @@ class Mahasiswa:
             print("Nim tidak ditemukan")
 ````
 
+File ini berisi kelas-kelas yang mendefinisikan model data mahasiswa, serta operasi dasar yang bisa dilakukan pada data mahasiswa (tambah, ubah, hapus, cari, dan tampilkan data).
+
+Kelas:
+Mahasiswa:
+Bertanggung jawab untuk menyimpan data mahasiswa seperti NIM, nama, jurusan, dan tahun masuk.
+Memiliki metode __str__ untuk mempermudah pencetakan objek mahasiswa dalam format yang mudah dibaca.
+DataMahasiswa:
+Berfungsi untuk mengelola kumpulan data mahasiswa.
+Memiliki beberapa metode untuk memanipulasi data mahasiswa, seperti menambah mahasiswa (tambah_mahasiswa), menghapus mahasiswa berdasarkan NIM (hapus_mahasiswa), memperbarui data mahasiswa (ubah_mahasiswa), mencari mahasiswa berdasarkan NIM (cari_mahasiswa), dan menampilkan seluruh mahasiswa (tampilkan_semua).
+
 ## view.input_form.py
 ```Python
 import time
@@ -133,6 +143,12 @@ def ubah_data(data):
 
 ````
 
+File ini berisi form input untuk memasukkan data mahasiswa baru ke dalam sistem. Ketika dijalankan, file ini akan meminta input dari pengguna seperti NIM, nama, jurusan, dan tahun masuk mahasiswa.
+
+Kelas:
+InputForm:
+Menyediakan metode tampilkan_form() yang meminta inputan dari pengguna dan mengembalikan data yang dimasukkan sebagai tuple.
+
 ## view.mahasiswa.py
 ```Python
 from data.mahasiswa import Mahasiswa
@@ -163,6 +179,13 @@ def keluar_program():
         print("Program berhasil dihentikan")
         exit()
 ````
+File ini bertugas untuk menampilkan data mahasiswa, baik dalam bentuk list seluruh mahasiswa maupun detail dari seorang mahasiswa.
+
+Kelas:
+MahasiswaView:
+Menyediakan dua metode utama:
+tampilkan_list(): Menampilkan seluruh daftar mahasiswa yang ada di dalam mahasiswa_list.
+tampilkan_detail(): Menampilkan detail dari seorang mahasiswa berdasarkan data yang diberikan. Jika mahasiswa tidak ditemukan, maka akan menampilkan pesan kesalahan.
 
 ## main.py
 ```Python
@@ -197,3 +220,9 @@ def main():
 if __name__ == "__main__":
     main()
 ````
+
+File ini merupakan program utama yang menjalankan menu interaktif untuk pengguna. Pengguna dapat memilih berbagai opsi untuk mengelola data mahasiswa, seperti menambah, mengubah, menghapus, mencari, dan menampilkan daftar mahasiswa.
+
+Fungsi:
+Menampilkan menu utama yang memungkinkan pengguna untuk memilih tindakan (menambah, menghapus, mengubah, mencari, menampilkan).
+Menggunakan kelas-kelas di file mahasiswa.py, input_form.py, dan mahasiswa_view.py untuk menjalankan fungsi-fungsi tersebut.
